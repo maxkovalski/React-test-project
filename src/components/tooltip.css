@@ -1,0 +1,40 @@
+.tooltip {
+    width: 100px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 70%;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+
+@media screen and (max-width: 550px)  {
+
+.tooltip {
+    width: 70%;
+    top: 60%;
+    left: 15%;
+}
+
+.tooltip::after {
+    right: 50%;
+    top: -10%;
+    margin-left: -5px;
+    border-color: transparent transparent #fff transparent;
+}
+
+}
