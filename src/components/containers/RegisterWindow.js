@@ -10,8 +10,8 @@ require('./registerwindow.css');
 var RegisterWindow = React.createClass({
 	getInitialState: function(){
 		return {
-			nameIsValid: false,
-			lastNameIsValid: false
+			validName: false,
+			validLastName: false
 		};
 	},
 	componentDidMount: function()
@@ -20,16 +20,19 @@ var RegisterWindow = React.createClass({
 	},
 	handleChange: function(fieldName, e) {
 		e.preventDefault();
-		if (e.target.value.trim().length > 0) {
-			this.setState({[''+ fieldName] : true});
+		var value = e.target.value.trim();
+		if (value.length > 0) {
+			this.setState({[''+ fieldName] : value});
 		} else {
-			this.setState({[''+ fieldName] : false});
+			this.setState({[''+ fieldName] : value});
 		}
 	},
 	handleClick: function(e) {
 		e.preventDefault();
-		if (this.state.nameIsValid && this.state.lastNameIsValid) {
-			alert('Everything is ok!');
+		if (this.state.validName.length > 0 && this.state.validLastName.length > 0) {
+			
+			this.props.closePortal();
+
 		} else {
 			this.refs.myPortal.openPortal();
 		}

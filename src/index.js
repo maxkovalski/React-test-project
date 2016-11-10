@@ -5,7 +5,7 @@ import MainRouter from './router.js';
 
 
 render(
-	<MainRouter />,
+ <MainRouter />,  
   document.getElementById('root')
 )
 
