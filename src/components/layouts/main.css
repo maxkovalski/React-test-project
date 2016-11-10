@@ -21,3 +21,26 @@ main {
 	color: #555;
 	padding-bottom: 30px;
 }
+
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #555;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #a7a7a7;
+}

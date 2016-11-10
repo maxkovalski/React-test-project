@@ -1,10 +1,12 @@
-import 'babel-polyfill'
-import React from 'react'
-import { render } from 'react-dom'
-import App from './components/App.js'
+import 'babel-polyfill';
+import React from 'react';
+import { render } from 'react-dom';
+import MainRouter from './router.js';
 
 
 render(
-  <App />,
+	<MainRouter />,
   document.getElementById('root')
 )
+
+

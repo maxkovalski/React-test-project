@@ -45,6 +45,9 @@ module.exports = {
         test: /\.useable\.css$/, 
         loader: "style/useable!css" 
       }
-    ]
+    ],
+    devServer: {
+      historyApiFallback: true
+    }
   }
 }
